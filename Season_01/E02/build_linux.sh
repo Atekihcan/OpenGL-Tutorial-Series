@@ -21,7 +21,7 @@ fi
 # If build directory doesn't exist, create and issue CMake generator command
 if [ ! -d $BUILD_DIR ]; then
     mkdir $BUILD_DIR
-    cmake -H. -B$BUILD_DIR -"G$CMAKE_GENERATOR" -DCMAKE_INSTALL_PREFIX:PATH=$INSTALL_DIR
+    cmake -H. -B$BUILD_DIR -G"$CMAKE_GENERATOR" -DCMAKE_INSTALL_PREFIX:PATH=$INSTALL_DIR
 fi
 
 # Build and install
