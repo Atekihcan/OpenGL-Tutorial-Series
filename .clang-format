@@ -1,0 +1,31 @@
+---
+# Based on Google coding style
+# Reference https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: Google
+IndentWidth: 4
+ColumnLimit: 160
+Cpp11BracedListStyle: true
+
+# Alignments
+AccessModifierOffset: -3
+DerivePointerAlignment: false
+PointerAlignment: Left
+AlignTrailingComments: true
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: true
+AlignConsecutiveMacros: true
+AlignEscapedNewlines: Left
+
+# Short code blocks
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+
+# Spaces
+SpacesInAngles: false
+SpacesBeforeTrailingComments: 2
+
+CompactNamespaces: true
+BinPackArguments: false
+BinPackParameters: false
