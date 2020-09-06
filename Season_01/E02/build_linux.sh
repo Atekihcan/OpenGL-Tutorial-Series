@@ -24,6 +24,15 @@ if [ ! -d $BUILD_DIR ]; then
     cmake -H. -B$BUILD_DIR -G"$CMAKE_GENERATOR" -DCMAKE_INSTALL_PREFIX:PATH=$INSTALL_DIR
 fi
 
-# Build and install
+# Build the executable
 cmake --build $BUILD_DIR --config $BUILD_TYPE
+
+# Install the executable in specified path
 cmake --install $BUILD_DIR --config $BUILD_TYPE
+
+# Note: The above install command will fail if CMake version < 3.15
+# In that case, modify the build command as follows to install as well
+#       cmake --build $BUILD_DIR --config $BUILD_TYPE --target INSTALL
+#
+# Prefer keep it separate, as it gives better control
+# and also removes some unnecessary build warnings
